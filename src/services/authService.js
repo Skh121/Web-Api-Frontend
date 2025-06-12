@@ -1,5 +1,4 @@
-import registerUserApi from "../api/authApi"
-import loginUserApi from "../api/authApi"
+import {loginUserApi,registerUserApi} from "../api/authApi"
 export const registerUserService= async(formData)=>{
     try{
         const response = await registerUserApi(formData);

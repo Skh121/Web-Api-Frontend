@@ -1,8 +1,10 @@
-import axios from "./Api";
+import instance from "./Api";
 
-const registerUserApi = (data)=>axios.post("/auth/register",data);
-const loginUserApi = (data)=>axios.post("/auth/login",data);
-
-export default{
-    registerUserApi,loginUserApi
+export const registerUserApi = async(data)=>{
+    const response =await instance.post("/auth/register",data);
+    return response;
+} 
+export const loginUserApi = async(data)=>{
+    const response = await instance.post("/auth/login",data);
+    return response;
 }

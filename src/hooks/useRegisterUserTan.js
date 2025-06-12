@@ -1,5 +1,6 @@
 import { useMutation } from "@tanstack/react-query"
 import {registerUserService} from "../services/authService"
+import {toast} from "react-toastify"
 
 const useRegisterUserTan=()=>{
     return useMutation(
@@ -8,6 +9,7 @@ const useRegisterUserTan=()=>{
             mutationKey:['register'],
             onSuccess:(data)=>{
                 toast.success(data.message || "Registration Successfull")
+                console.log(data)
             },
             onError:(err)=>{
                 toast.error(err.message || "Registration Failed")
