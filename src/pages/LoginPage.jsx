@@ -1,7 +1,7 @@
 import React from "react";
 import logoImage2 from "../assets/images/logoImage2.png";
 import loginSideImage from "../assets/images/LoginImage.png";
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../components/auth/LoginForm";
 
 const LoginPage = () => {
   return (

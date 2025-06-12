@@ -1,5 +1,6 @@
-import {registerUserApi,loginUserApi} from "../api/authApi"
-exports.registerUserService= async(formData)=>{
+import registerUserApi from "../api/authApi"
+import loginUserApi from "../api/authApi"
+export const registerUserService= async(formData)=>{
     try{
         const response = await registerUserApi(formData);
         return response.data
@@ -7,7 +8,7 @@ exports.registerUserService= async(formData)=>{
         throw e.response?.data || {message:"Registration Failed"}
     }
 }
-exports.loginUserService= async(formData)=>{
+export const loginUserService= async(formData)=>{
     try{
         const response = await loginUserApi(formData);
         return response.data
